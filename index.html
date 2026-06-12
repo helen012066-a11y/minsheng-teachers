@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彰化縣彰化市民生國民小學教師會</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Microsoft JhengHei","微軟正黑體",sans-serif;background:#f5f6f8;color:#222;font-size:15px;line-height:1.6}
+
+/* ── Header ── */
+.site-header{background:#1a5c35}
+.header-top{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px 10px}
+.logo{display:flex;align-items:center;gap:14px}
+.logo-icon{width:52px;height:52px;background:rgba(255,255,255,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:26px;color:#fff;flex-shrink:0}
+.logo-text h1{color:#fff;font-size:18px;font-weight:700;line-height:1.3}
+.logo-text p{color:rgba(255,255,255,0.72);font-size:11.5px;margin-top:2px}
+.header-contact{text-align:right;color:rgba(255,255,255,0.75);font-size:12px;line-height:1.8}
+.header-contact a{color:rgba(255,255,255,0.85);text-decoration:none}
+
+/* ── Nav ── */
+nav{background:#145228;border-top:1px solid rgba(255,255,255,0.1)}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap}
+.nav-btn{color:rgba(255,255,255,0.78);font-size:13.5px;padding:11px 20px;cursor:pointer;border:none;background:none;border-bottom:3px solid transparent;transition:all .15s;display:flex;align-items:center;gap:7px}
+.nav-btn:hover{color:#fff;background:rgba(255,255,255,0.06)}
+.nav-btn.active{color:#fff;border-bottom-color:#6fcf97;font-weight:700}
+.nav-btn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* ── Pages ── */
+.page{display:none}
+.page.active{display:block}
+.page-wrap{max-width:1100px;margin:0 auto;padding:24px 20px 40px}
+
+/* ── Hero ── */
+.hero{background:linear-gradient(135deg,#145228,#1e7a40 55%,#27a558);color:#fff;padding:32px 20px}
+.hero-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-start;gap:24px;flex-wrap:wrap}
+.hero-left h2{font-size:26px;font-weight:700;margin-bottom:8px;line-height:1.3}
+.hero-left p{font-size:14px;opacity:.85;max-width:480px;line-height:1.7}
+.hero-stats{display:flex;gap:28px;margin-top:20px;flex-wrap:wrap}
+.stat{text-align:center}
+.stat .n{font-size:28px;font-weight:700}
+.stat .l{font-size:12px;opacity:.72;margin-top:2px}
+.hero-btns{display:flex;flex-direction:column;gap:9px;min-width:160px}
+.hbtn{background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.28);color:#fff;font-size:13px;padding:9px 16px;border-radius:8px;cursor:pointer;display:flex;align-items:center;gap:8px;white-space:nowrap;font-family:inherit}
+.hbtn:hover{background:rgba(255,255,255,0.26)}
+.hbtn svg{width:15px;height:15px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+
+/* ── Two-col layout ── */
+.two-col{display:grid;grid-template-columns:1fr 290px;gap:22px}
+@media(max-width:860px){.two-col{grid-template-columns:1fr}}
+
+/* ── Cards ── */
+.card{background:#fff;border-radius:10px;border:1px solid #e2e5ea;margin-bottom:18px;overflow:hidden}
+.card-hdr{display:flex;align-items:center;justify-content:space-between;padding:14px 18px 10px;border-bottom:1px solid #f0f0f0}
+.card-hdr h3{font-size:14.5px;font-weight:700;display:flex;align-items:center;gap:8px;color:#1a1a1a}
+.card-hdr h3 svg{width:18px;height:18px;stroke:#1a5c35;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.card-hdr a{font-size:12px;color:#1a7a40;cursor:pointer;text-decoration:none}
+.card-body{padding:14px 18px}
+
+/* ── Announcements ── */
+.ann-item{display:flex;gap:12px;align-items:flex-start;padding:11px 0;border-bottom:1px solid #f0f2f5}
+.ann-item:last-child{border-bottom:none}
+.tag{font-size:10.5px;padding:2px 8px;border-radius:4px;font-weight:700;white-space:nowrap;margin-top:3px;flex-shrink:0}
+.tag-red{background:#fce8e8;color:#a32d2d}
+.tag-green{background:#e1f5ee;color:#0f6e56}
+.tag-blue{background:#e6f1fb;color:#185fa5}
+.tag-gray{background:#f0f0f0;color:#555}
+.ann-title{font-size:13.5px;color:#1a1a1a;cursor:pointer;line-height:1.55}
+.ann-title:hover{color:#1a7a40;text-decoration:underline}
+.ann-meta{font-size:11.5px;color:#888;margin-top:4px}
+
+/* ── Calendar ── */
+.cal-nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.cal-nav span{font-size:14px;font-weight:700;color:#222}
+.cal-nav button{background:#f5f6f8;border:1px solid #e2e5ea;color:#555;width:26px;height:26px;border-radius:6px;cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;text-align:center}
+.dow{font-size:11px;color:#888;padding:4px 0;font-weight:700}
+.cday{font-size:12px;padding:5px 2px;border-radius:5px;cursor:pointer;color:#333;position:relative}
+.cday:hover{background:#eef8f2}
+.cday.today{background:#1a5c35;color:#fff;border-radius:50%;width:26px;height:26px;display:flex;align-items:center;justify-content:center;margin:0 auto;font-weight:700}
+.cday.has-ev::after{content:'';display:block;width:4px;height:4px;background:#e74c3c;border-radius:50%;margin:1px auto 0}
+.cday.today.has-ev::after{background:#a8f0c0}
+.cday.other{color:#ccc}
+.event-chip{background:#eef8f2;border-left:3px solid #1a5c35;border-radius:6px;padding:7px 11px;margin-bottom:8px}
+.event-chip .etitle{font-size:12.5px;font-weight:700;color:#145228}
+.event-chip .etime{font-size:11.5px;color:#666;margin-top:3px}
+.event-chip.urgent{background:#fff5f5;border-left-color:#c0392b}
+.event-chip.urgent .etitle{color:#922b21}
+
+/* ── Downloads ── */
+.dl-row{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #f0f2f5}
+.dl-row:last-child{border-bottom:none}
+.dl-ico{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0}
+.ico-pdf{background:#fce8e8;color:#a32d2d}
+.ico-doc{background:#e6f1fb;color:#185fa5}
+.dl-info .dname{font-size:13px;font-weight:700;color:#1a1a1a}
+.dl-info .dmeta{font-size:11.5px;color:#888;margin-top:2px}
+.dl-info{flex:1}
+.dlbtn{background:#f5f6f8;border:1px solid #e2e5ea;color:#444;padding:5px 13px;border-radius:7px;font-size:12px;cursor:pointer;font-family:inherit;display:flex;align-items:center;gap:5px;white-space:nowrap}
+.dlbtn:hover{border-color:#1a5c35;color:#1a5c35;background:#eef8f2}
+.dlbtn svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+
+/* ── Contact sidebar ── */
+.contact-row{display:flex;align-items:flex-start;gap:10px;padding:7px 0;font-size:13px;border-bottom:1px solid #f0f2f5;color:#444}
+.contact-row:last-child{border-bottom:none}
+.contact-row svg{width:16px;height:16px;stroke:#1a5c35;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;margin-top:2px}
+.contact-row a{color:#185fa5;text-decoration:none}
+.contact-row a:hover{text-decoration:underline}
+
+/* ── Member list ── */
+.member-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
+.member-card{background:#fff;border:1px solid #e2e5ea;border-radius:9px;padding:14px 16px;display:flex;align-items:center;gap:12px}
+.avatar{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;flex-shrink:0}
+.av-green{background:#e1f5ee;color:#0b5e3f}
+.av-blue{background:#ddeeff;color:#1a4a8a}
+.av-amber{background:#fef3dc;color:#7a4a00}
+.av-coral{background:#fde8e4;color:#8a2a1a}
+.av-purple{background:#ede8fc;color:#4a1a8a}
+.av-rose{background:#fce8f3;color:#8a1a5a}
+.member-name{font-size:13.5px;font-weight:700;color:#1a1a1a}
+.member-role{font-size:11.5px;color:#888;margin-top:2px}
+.member-badge{font-size:10px;padding:2px 7px;border-radius:12px;font-weight:700;margin-top:4px;display:inline-block}
+.badge-principal{background:#fff3cd;color:#856404}
+.badge-director{background:#d1ecf1;color:#0c5460}
+.badge-chief{background:#d4edda;color:#155724}
+.badge-teacher{background:#f0f0f0;color:#555}
+
+/* ── About ── */
+.about-section{background:#fff;border-radius:10px;border:1px solid #e2e5ea;padding:28px;margin-bottom:18px}
+.about-section h2{font-size:18px;font-weight:700;color:#145228;margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid #e8f5ed}
+.about-section h3{font-size:15px;font-weight:700;color:#1a5c35;margin:16px 0 8px}
+.about-section p{color:#444;line-height:1.8;margin-bottom:10px;font-size:14px}
+.about-section ul{padding-left:20px;color:#444;font-size:14px;line-height:1.9}
+.about-section ul li{margin-bottom:4px}
+.org-chart{display:flex;flex-direction:column;align-items:center;gap:0;margin:20px 0}
+.org-box{background:#e8f5ed;border:2px solid #1a5c35;border-radius:8px;padding:10px 24px;font-size:14px;font-weight:700;color:#145228;text-align:center}
+.org-box.sub{background:#f5f6f8;border:1px solid #c0d8ca;color:#333;font-weight:400;font-size:13px}
+.org-row{display:flex;gap:16px;align-items:flex-start}
+.org-line{width:2px;height:20px;background:#ccc;margin:0 auto}
+.org-hline{height:2px;background:#ccc;flex:1;margin-top:20px}
+
+/* ── Charter ── */
+.charter-wrap{background:#fff;border-radius:10px;border:1px solid #e2e5ea;padding:28px}
+.charter-wrap h2{font-size:20px;font-weight:700;text-align:center;color:#145228;margin-bottom:6px}
+.charter-wrap .subtitle{text-align:center;color:#888;font-size:13px;margin-bottom:24px}
+.charter-chapter{font-size:15px;font-weight:700;color:#1a5c35;margin:22px 0 10px;padding-bottom:6px;border-bottom:2px solid #e8f5ed}
+.charter-article{margin-bottom:14px}
+.charter-article .art-title{font-size:13.5px;font-weight:700;color:#222;margin-bottom:4px}
+.charter-article .art-body{font-size:13.5px;color:#444;line-height:1.8;padding-left:14px}
+.charter-article .art-body ol{padding-left:18px}
+.charter-article .art-body li{margin-bottom:3px}
+
+/* ── Footer ── */
+footer{background:#1a5c35;color:rgba(255,255,255,0.7);font-size:12px;padding:18px 20px;margin-top:0}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.footer-inner a{color:rgba(255,255,255,0.6);text-decoration:none}
+.footer-inner a:hover{color:#fff}
+
+/* ── Page heading ── */
+.page-heading{background:#fff;border-bottom:1px solid #e2e5ea;padding:20px}
+.page-heading-inner{max-width:1100px;margin:0 auto}
+.page-heading h2{font-size:20px;font-weight:700;color:#145228}
+.page-heading p{font-size:13px;color:#888;margin-top:4px}
+
+/* ── Tabs ── */
+.tabs{display:flex;gap:0;border-bottom:2px solid #e8f5ed;margin-bottom:20px}
+.tab{font-size:13.5px;padding:9px 18px;cursor:pointer;color:#666;border-bottom:2px solid transparent;margin-bottom:-2px;background:none;border-top:none;border-left:none;border-right:none;font-family:inherit}
+.tab.active{color:#1a5c35;border-bottom-color:#1a5c35;font-weight:700}
+.tab-pane{display:none}
+.tab-pane.active{display:block}
+
+/* ── Search ── */
+.search-bar{display:flex;gap:8px;margin-bottom:18px}
+.search-bar input{flex:1;padding:9px 14px;border:1px solid #e2e5ea;border-radius:8px;font-size:13.5px;font-family:inherit;outline:none}
+.search-bar input:focus{border-color:#1a5c35}
+.search-bar button{background:#1a5c35;color:#fff;border:none;border-radius:8px;padding:9px 18px;cursor:pointer;font-size:13.5px;font-family:inherit}
+
+/* ── Notice ── */
+.notice{background:#fff8e1;border:1px solid #ffe082;border-radius:8px;padding:12px 16px;margin-bottom:16px;font-size:13px;color:#6d4c00;display:flex;gap:10px;align-items:flex-start}
+.notice svg{width:18px;height:18px;stroke:#f9a825;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;margin-top:1px}
+
+/* ── Responsive ── */
+@media(max-width:600px){
+  .hero-inner{flex-direction:column}
+  .hero-btns{flex-direction:row;flex-wrap:wrap}
+  .header-contact{display:none}
+  .logo-text h1{font-size:15px}
+}
+</style>
+</head>
+<body>
+
+<!-- ══ HEADER ══ -->
+<header class="site-header">
+  <div class="header-top">
+    <div class="logo">
+      <div class="logo-icon">🏫</div>
+      <div class="logo-text">
+        <h1>彰化縣彰化市民生國民小學教師會</h1>
+        <p>Minsheng Elementary School Teachers' Association, Changhua City</p>
+      </div>
+    </div>
+    <div class="header-contact">
+      <div>📍 彰化縣彰化市民生路338號</div>
+      <div>✉️ <a href="mailto:helen012066@gmail.com">helen012066@gmail.com</a></div>
+    </div>
+  </div>
+  <nav>
+    <div class="nav-inner">
+      <button class="nav-btn active" onclick="showPage('home',this)">
+        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        首頁
+      </button>
+      <button class="nav-btn" onclick="showPage('about',this)">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        會務介紹
+      </button>
+      <button class="nav-btn" onclick="showPage('news',this)">
+        <svg viewBox="0 0 24 24"><path d="M22 17H2a3 3 0 004-2.83V9a7 7 0 0114 0v5.17A3 3 0 0022 17z"/><path d="M10.3 21a1.94 1.94 0 003.4 0"/></svg>
+        公告欄
+      </button>
+      <button class="nav-btn" onclick="showPage('calendar',this)">
+        <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        行事曆
+      </button>
+      <button class="nav-btn" onclick="showPage('members',this)">
+        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        會員名冊
+      </button>
+      <button class="nav-btn" onclick="showPage('charter',this)">
+        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        組織章程
+      </button>
+      <button class="nav-btn" onclick="showPage('downloads',this)">
+        <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        檔案下載
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- ══ PAGE: HOME ══ -->
+<div id="page-home" class="page active">
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <h2>守護教育，團結共進</h2>
+        <p>民生國小教師會以保障教師專業自主、促進教育發展、維護教師權益為宗旨，凝聚全體教師力量，共同守護民生的孩子與教育環境。</p>
+        <div class="hero-stats">
+          <div class="stat"><div class="n">43</div><div class="l">全體會員</div></div>
+          <div class="stat"><div class="n">9</div><div class="l">理事名額</div></div>
+          <div class="stat"><div class="n">3</div><div class="l">監事名額</div></div>
+        </div>
+      </div>
+      <div class="hero-btns">
+        <button class="hbtn" onclick="showPage('downloads',document.querySelector('[onclick*=downloads]'))">
+          <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          入會申請表下載
+        </button>
+        <button class="hbtn" onclick="showPage('calendar',document.querySelector('[onclick*=calendar]'))">
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          近期重要行程
+        </button>
+        <button class="hbtn" onclick="showPage('about',document.querySelector('[onclick*=about]'))">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          認識教師會
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-wrap">
+    <div class="notice">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <div><strong>重要公告：</strong>本教師會於中華民國115年6月26日（星期五）舉行理監事選舉，請全體會員務必親自出席。理事長選舉訂於7月31日（返校日）辦理。</div>
+    </div>
+    <div class="two-col">
+      <!-- Left -->
+      <div>
+        <div class="card">
+          <div class="card-hdr">
+            <h3>
+              <svg viewBox="0 0 24 24"><path d="M22 17H2a3 3 0 004-2.83V9a7 7 0 0114 0v5.17A3 3 0 0022 17z"/><path d="M10.3 21a1.94 1.94 0 003.4 0"/></svg>
+              最新公告
+            </h3>
+            <a onclick="showPage('news',document.querySelector('[onclick*=news]'))">查看全部 →</a>
+          </div>
+          <div class="card-body">
+            <div class="ann-item">
+              <span class="tag tag-green">會議紀錄</span>
+              <div>
+                <div class="ann-title" onclick="showPage('news',document.querySelector('[onclick*=news]'))">第10屆第2次會員大會議程記錄（115年6月12日）——審議組織章程及理監事選舉辦法</div>
+                <div class="ann-meta">115年6月12日 ｜ 第一會議室 ｜ 上午8時0分</div>
+              </div>
+            </div>
+            <div class="ann-item">
+              <span class="tag tag-red">重要</span>
+              <div>
+                <div class="ann-title" onclick="showPage('news',document.querySelector('[onclick*=news]'))">115年6月26日（五）理監事選舉暨章程通過大會，請全體會員務必出席</div>
+                <div class="ann-meta">115年6月8日 ｜ 上午8:00–8:20，第一會議室</div>
+              </div>
+            </div>
+            <div class="ann-item">
+              <span class="tag tag-red">重要</span>
+              <div>
+                <div class="ann-title" onclick="showPage('news',document.querySelector('[onclick*=news]'))">理事長選舉日期更正：由6月26日更正為7月31日（返校日）</div>
+                <div class="ann-meta">115年6月11日 ｜ 發文字號：115民教字第0002號</div>
+              </div>
+            </div>
+            <div class="ann-item">
+              <span class="tag tag-green">活動</span>
+              <div>
+                <div class="ann-title" onclick="showPage('news',document.querySelector('[onclick*=news]'))">115年6月12日（五）章程審議會，請詳閱章程草案並提出意見</div>
+                <div class="ann-meta">115年6月8日 ｜ 上午8:00–8:15，第一會議室</div>
+              </div>
+            </div>
+            <div class="ann-item">
+              <span class="tag tag-blue">通知</span>
+              <div>
+                <div class="ann-title">各群組成員請於6月20日前推薦理事候選人（候選人推薦，非正式當選）</div>
+                <div class="ann-meta">115年6月8日 ｜ 一至六年級、科任各推薦至少1名；行政推薦至少2名</div>
+              </div>
+            </div>
+            <div class="ann-item">
+              <span class="tag tag-blue">通知</span>
+              <div>
+                <div class="ann-title">群組歸屬確認：如有疑問請於6月9日（二）前向理事長確認</div>
+                <div class="ann-meta">115年6月8日 ｜ 學年級任／科任／行政群組歸屬確認</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-hdr">
+            <h3>
+              <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              常用檔案下載
+            </h3>
+            <a onclick="showPage('downloads',document.querySelector('[onclick*=downloads]'))">更多 →</a>
+          </div>
+          <div class="card-body">
+            <div class="dl-row">
+              <div class="dl-ico ico-pdf">PDF</div>
+              <div class="dl-info">
+                <div class="dname">民生國小教師會組織章程（115年6月26日通過版）</div>
+                <div class="dmeta">PDF ｜ 組織章程正式版本</div>
+              </div>
+              <button class="dlbtn"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>下載</button>
+            </div>
+            <div class="dl-row">
+              <div class="dl-ico ico-pdf">PDF</div>
+              <div class="dl-info">
+                <div class="dname">理監事選舉實施章程（115年6月26日通過版）</div>
+                <div class="dmeta">PDF ｜ 選舉規則說明</div>
+              </div>
+              <button class="dlbtn"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>下載</button>
+            </div>
+            <div class="dl-row">
+              <div class="dl-ico ico-doc">DOC</div>
+              <div class="dl-info">
+                <div class="dname">教師會入會申請書</div>
+                <div class="dmeta">Word ｜ 申請入會請填寫後送交理事長</div>
+              </div>
+              <button class="dlbtn"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>下載</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right sidebar -->
+      <div>
+        <div class="card">
+          <div class="card-hdr"><h3>
+            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            近期重要行程
+          </h3></div>
+          <div class="card-body">
+            <div class="event-chip urgent">
+              <div class="etitle">⚠️ 章程審議會</div>
+              <div class="etime">115年6月12日（五）08:00–08:15<br>第一會議室｜請詳閱章程草案</div>
+            </div>
+            <div class="event-chip urgent">
+              <div class="etitle">⚠️ 理監事選舉暨章程通過大會</div>
+              <div class="etime">115年6月26日（五）08:00–08:20<br>第一會議室｜全體會員必須出席</div>
+            </div>
+            <div class="event-chip">
+              <div class="etitle">理事候選人推薦截止</div>
+              <div class="etime">115年6月20日（四）前<br>各群組自行推薦候選人</div>
+            </div>
+            <div class="event-chip">
+              <div class="etitle">理事長選舉暨職務交接</div>
+              <div class="etime">115年7月31日（五）返校日<br>08:00–08:20，第一會議室</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-hdr"><h3>
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.02 2.2 2 2 0 012 .02h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg>
+            聯絡資訊
+          </h3></div>
+          <div class="card-body">
+            <div class="contact-row">
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>彰化縣彰化市民生路338號</span>
+            </div>
+            <div class="contact-row">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:helen012066@gmail.com">helen012066@gmail.com</a>
+            </div>
+            <div class="contact-row">
+              <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              <span>聯絡人：理事長 許秋燕</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ PAGE: ABOUT ══ -->
+<div id="page-about" class="page">
+  <div class="page-heading">
+    <div class="page-heading-inner">
+      <h2>會務介紹</h2>
+      <p>認識彰化縣彰化市民生國民小學教師會</p>
+    </div>
+  </div>
+  <div class="page-wrap">
+    <div class="about-section">
+      <h2>關於本會</h2>
+      <p>本會定名為「彰化縣彰化市民生國民小學教師會」，係依教師法及人民團體法規定組成之職業團體，以保障教師專業自主、促進教育發展、維護教師權益為宗旨，於中華民國115年6月26日完成章程通過及理監事選舉，正式開始運作。</p>
+      <h3>本會任務</h3>
+      <ul>
+        <li>研究並改進教育方法，提升教學品質</li>
+        <li>維護會員之專業尊嚴與合法權益</li>
+        <li>協助辦理教師進修及專業發展活動</li>
+        <li>反映會員意見，與學校行政進行溝通協調</li>
+        <li>辦理會員福利及聯誼活動</li>
+        <li>其他依法令或章程規定應辦理之事項</li>
+      </ul>
+    </div>
+
+    <div class="about-section">
+      <h2>組織架構</h2>
+      <p>本會設會員大會、理事會（含理事長）及監事會三個主要組織，並設財務文書一人。</p>
+      <div style="overflow-x:auto">
+        <table style="width:100%;border-collapse:collapse;font-size:13.5px;margin-top:12px">
+          <thead>
+            <tr style="background:#eef8f2">
+              <th style="padding:10px 14px;text-align:left;border:1px solid #d4e8dc;color:#145228">組織</th>
+              <th style="padding:10px 14px;text-align:left;border:1px solid #d4e8dc;color:#145228">人數</th>
+              <th style="padding:10px 14px;text-align:left;border:1px solid #d4e8dc;color:#145228">選出方式</th>
+              <th style="padding:10px 14px;text-align:left;border:1px solid #d4e8dc;color:#145228">任期</th>
+              <th style="padding:10px 14px;text-align:left;border:1px solid #d4e8dc;color:#145228">主要職權</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding:10px 14px;border:1px solid #e8f0eb;font-weight:700;color:#145228">理事長</td>
+              <td style="padding:10px 14px;border:1px solid #e8f0eb">1名</td>
+              <td style="padding:10px 14px;border:1px solid #e8f0eb">全體會員從當選理事中無記名單記投票</td>
+              <td style="padding:10px 14px;border:1px solid #e8f0eb">2年，連任1次</td>
+              <td style="padding:10px 14px;border:1px solid #e8f0eb">對外代表本會，主持理事會及日常會務</td>
+            </tr>
+            <tr style="background:#fafafa">
+              <td style="padding:10px 14px;border:1px solid #e8f0eb;font-weight:700;color:#145228">理事會</td>
+              <td style="padding:10px 14px;border:1px solid #e8f0eb">9名</td>
+              <td style="padding:10px 14px;border:1px solid #e8f0eb">各群組（學年6名、科任1名、行政2名）</td>
+              <td style="padding:10px 14px;border:1px solid #e8f0eb">2年，連選得連任</td>
+              <td style="padding:10px 14px;border:1px solid #e8f0eb">執行會員大會決議、處理日常會務</td>
+            </tr>
+            <tr>
+              <td style="padding:10px 14px;border:1px solid #e8f0eb;font-weight:700;color:#145228">監事會</td>
+              <td style="padding:10px 14px;border:1px solid #e8f0eb">3名</td>
+              <td style="padding:10px 14px;border:1px solid #e8f0eb">全體會員連記投票（每人圈3名）</td>
+              <td style="padding:10px 14px;border:1px solid #e8f0eb">2年，連選得連任</td>
+              <td style="padding:10px 14px;border:1px solid #e8f0eb">監察理事會財務、審查決算報告</td>
+            </tr>
+            <tr style="background:#fafafa">
+              <td style="padding:10px 14px;border:1px solid #e8f0eb;font-weight:700;color:#145228">財務文書</td>
+              <td style="padding:10px 14px;border:1px solid #e8f0eb">1名</td>
+              <td style="padding:10px 14px;border:1px solid #e8f0eb">公開徵求，理事會審議任命</td>
+              <td style="padding:10px 14px;border:1px solid #e8f0eb">與理監事任期一致</td>
+              <td style="padding:10px 14px;border:1px solid #e8f0eb">帳務記錄、印信保管、文件整理</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="about-section">
+      <h2>會員資格與入會</h2>
+      <h3>入會資格</h3>
+      <p>凡服務於彰化縣彰化市民生國民小學，依法取得教師資格之現職教師（含學年級任教師、科任教師及兼任行政職務之教師），均得申請加入本會為會員。本會採<strong>自願入會制</strong>，入會自申請經理事會核准後生效。</p>
+      <h3>會費</h3>
+      <p>本會<strong>目前不收取會費</strong>。如日後有財務需求，得由理事會提案，經會員大會出席會員過半數同意後，訂定會費標準並公告之。</p>
+      <h3>會員權利</h3>
+      <ul>
+        <li>出席會員大會並享有表決權、選舉權、被選舉權及罷免權</li>
+        <li>享受本會一切活動及福利</li>
+        <li>對本會業務提出建議及批評</li>
+        <li>請求本會協助處理與教師職務相關之事宜</li>
+      </ul>
+    </div>
+
+    <div class="about-section">
+      <h2>聯絡我們</h2>
+      <p>如有任何問題，歡迎透過以下方式聯絡本會理事長：</p>
+      <ul>
+        <li>地址：500 彰化縣彰化市民生路338號</li>
+        <li>電子信箱：helen012066@gmail.com</li>
+        <li>聯絡人：理事長 許秋燕</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ══ PAGE: NEWS ══ -->
+<div id="page-news" class="page">
+  <div class="page-heading">
+    <div class="page-heading-inner">
+      <h2>公告欄</h2>
+      <p>最新消息與重要通知</p>
+    </div>
+  </div>
+  <div class="page-wrap">
+    <div class="tabs">
+      <button class="tab active" onclick="switchTab(this,'tab-all')">全部</button>
+      <button class="tab" onclick="switchTab(this,'tab-important')">重要公告</button>
+      <button class="tab" onclick="switchTab(this,'tab-activity')">活動通知</button>
+      <button class="tab" onclick="switchTab(this,'tab-election')">選舉事宜</button>
+    </div>
+
+    <div id="tab-all" class="tab-pane active">
+      <div class="card"><div class="card-body">
+                <div class="ann-item">
+              <span class="tag tag-green">會議紀錄</span>
+              <div>
+                <div class="ann-title">第10屆第2次會員大會議程記錄（115年6月12日）</div>
+                <div class="ann-meta">115年6月12日 ｜ 第一會議室 ｜ 上午8時0分</div>
+                <p style="font-size:13px;color:#555;margin-top:8px;line-height:1.7">審議民生國小教師會組織章程及理監事選舉辦法，無臨時動議，散會。</p>
+              </div>
+            </div>
+        <div class="ann-item">
+          <span class="tag tag-red">重要</span>
+          <div>
+            <div class="ann-title">理事長選舉日期更正公告</div>
+            <div class="ann-meta">115年6月11日 ｜ 發文字號：115民教字第0002號</div>
+            <p style="font-size:13px;color:#555;margin-top:8px;line-height:1.7">本會理事長選舉日期由原訂115年6月26日（星期五）更正為<strong>115年7月31日（星期五）返校日</strong>，時間上午8:00–8:20，地點不變（第一會議室）。其餘事項（6/12章程審議、6/26章程通過暨理監事選舉）均維持原通知內容。</p>
+          </div>
+        </div>
+        <div class="ann-item">
+          <span class="tag tag-red">重要</span>
+          <div>
+            <div class="ann-title">115年6月26日（五）理監事選舉暨章程通過大會——全體會員必須出席</div>
+            <div class="ann-meta">115年6月8日 ｜ 上午8:00–8:20，第一會議室</div>
+            <p style="font-size:13px;color:#555;margin-top:8px;line-height:1.7">本日將正式通過組織章程及選舉實施章程，並分群組辦理理事投票（共9名）及全體監事投票（共3名）。請全體會員務必親自出席，不得委託代投。</p>
+          </div>
+        </div>
+        <div class="ann-item">
+          <span class="tag tag-green">活動</span>
+          <div>
+            <div class="ann-title">115年6月12日（五）章程審議會——請詳閱草案並提出意見</div>
+            <div class="ann-meta">115年6月8日 ｜ 上午8:00–8:15，第一會議室</div>
+            <p style="font-size:13px;color:#555;margin-top:8px;line-height:1.7">本日為章程審議會，僅討論章程內容，不進行表決與選舉。請各位同仁詳閱附件章程草案，並於當日提出意見，以利6/26正式通過。議程包含：審議組織章程、審議理監事選舉實施章程、確認各群組成員名冊。</p>
+          </div>
+        </div>
+        <div class="ann-item">
+          <span class="tag tag-blue">選舉</span>
+          <div>
+            <div class="ann-title">理事候選人推薦作業——請各群組於6月20日前推薦</div>
+            <div class="ann-meta">115年6月8日</div>
+            <p style="font-size:13px;color:#555;margin-top:8px;line-height:1.7">一至六年級、科任群組各推薦至少1名；行政群組請推薦至少2名。此為候選人推薦作業，並非正式當選，正式結果以6/26投票為準。</p>
+          </div>
+        </div>
+        <div class="ann-item">
+          <span class="tag tag-blue">通知</span>
+          <div>
+            <div class="ann-title">群組歸屬確認通知</div>
+            <div class="ann-meta">115年6月8日</div>
+            <p style="font-size:13px;color:#555;margin-top:8px;line-height:1.7">各群組成員請確認自己的群組歸屬（學年級任／科任／行政）。如有疑問請於6月9日（二）前向理事長確認。群組歸屬依當學年度學校人事配置認定。</p>
+          </div>
+        </div>
+      </div></div>
+    </div>
+    <div id="tab-important" class="tab-pane">
+      <div class="card"><div class="card-body">
+        <div class="ann-item">
+          <span class="tag tag-red">重要</span>
+          <div>
+            <div class="ann-title">理事長選舉日期更正公告（115民教字第0002號）</div>
+            <div class="ann-meta">115年6月11日 ｜ 理事長許秋燕</div>
+          </div>
+        </div>
+        <div class="ann-item">
+          <span class="tag tag-red">重要</span>
+          <div>
+            <div class="ann-title">115年6月26日理監事選舉——全體會員必須出席</div>
+            <div class="ann-meta">115年6月8日</div>
+          </div>
+        </div>
+      </div></div>
+    </div>
+    <div id="tab-activity" class="tab-pane">
+      <div class="card"><div class="card-body">
+        <div class="ann-item">
+          <span class="tag tag-green">活動</span>
+          <div>
+            <div class="ann-title">115年6月12日（五）章程審議會</div>
+            <div class="ann-meta">115年6月8日 ｜ 08:00–08:15，第一會議室</div>
+          </div>
+        </div>
+      </div></div>
+    </div>
+    <div id="tab-election" class="tab-pane">
+      <div class="card"><div class="card-body">
+        <div class="ann-item">
+          <span class="tag tag-blue">選舉</span>
+          <div>
+            <div class="ann-title">115年7月31日（五）返校日——理事長選舉暨職務交接</div>
+            <div class="ann-meta">上午8:00–8:20，第一會議室</div>
+          </div>
+        </div>
+        <div class="ann-item">
+          <span class="tag tag-blue">選舉</span>
+          <div>
+            <div class="ann-title">115年6月26日（五）——理監事選舉（理事9名、監事3名）</div>
+            <div class="ann-meta">上午8:00–8:20，第一會議室</div>
+          </div>
+        </div>
+        <div class="ann-item">
+          <span class="tag tag-blue">選舉</span>
+          <div>
+            <div class="ann-title">理事候選人推薦——6月20日前各群組自行推薦</div>
+            <div class="ann-meta">115年6月8日</div>
+          </div>
+        </div>
+      </div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ PAGE: CALENDAR ══ -->
+<div id="page-calendar" class="page">
+  <div class="page-heading">
+    <div class="page-heading-inner">
+      <h2>行事曆</h2>
+      <p>115學年度重要行程</p>
+    </div>
+  </div>
+  <div class="page-wrap">
+    <div class="two-col">
+      <div>
+        <div class="card">
+          <div class="card-hdr"><h3>
+            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            115年6月行事曆
+          </h3></div>
+          <div class="card-body">
+            <div style="overflow-x:auto">
+              <table style="width:100%;border-collapse:collapse;font-size:13px">
+                <thead>
+                  <tr style="background:#eef8f2">
+                    <th style="padding:8px 14px;text-align:left;border:1px solid #d4e8dc;width:100px;color:#145228">日期</th>
+                    <th style="padding:8px 14px;text-align:left;border:1px solid #d4e8dc;color:#145228">事項</th>
+                    <th style="padding:8px 14px;text-align:left;border:1px solid #d4e8dc;color:#145228">時間／地點</th>
+                    <th style="padding:8px 14px;text-align:left;border:1px solid #d4e8dc;color:#145228">備註</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="padding:9px 14px;border:1px solid #e8f0eb;font-weight:700;color:#c0392b">6月9日（二）</td>
+                    <td style="padding:9px 14px;border:1px solid #e8f0eb">群組歸屬疑問確認截止</td>
+                    <td style="padding:9px 14px;border:1px solid #e8f0eb">—</td>
+                    <td style="padding:9px 14px;border:1px solid #e8f0eb">向理事長確認</td>
+                  </tr>
+                  <tr style="background:#fff8f8">
+                    <td style="padding:9px 14px;border:1px solid #e8f0eb;font-weight:700;color:#c0392b">6月12日（五）⭐</td>
+                    <td style="padding:9px 14px;border:1px solid #e8f0eb"><strong>章程審議會</strong></td>
+                    <td style="padding:9px 14px;border:1px solid #e8f0eb">08:00–08:15<br>第一會議室</td>
+                    <td style="padding:9px 14px;border:1px solid #e8f0eb">僅審議，不表決，請詳閱草案</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:9px 14px;border:1px solid #e8f0eb;font-weight:700;color:#c0392b">6月20日（四）</td>
+                    <td style="padding:9px 14px;border:1px solid #e8f0eb">理事候選人推薦截止</td>
+                    <td style="padding:9px 14px;border:1px solid #e8f0eb">—</td>
+                    <td style="padding:9px 14px;border:1px solid #e8f0eb">各群組自行推薦</td>
+                  </tr>
+                  <tr style="background:#fff8f8">
+                    <td style="padding:9px 14px;border:1px solid #e8f0eb;font-weight:700;color:#c0392b">6月26日（五）⭐⭐</td>
+                    <td style="padding:9px 14px;border:1px solid #e8f0eb"><strong>章程通過暨理監事選舉</strong></td>
+                    <td style="padding:9px 14px;border:1px solid #e8f0eb">08:00–08:20<br>第一會議室</td>
+                    <td style="padding:9px 14px;border:1px solid #e8f0eb;color:#c0392b"><strong>全體會員必須出席</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-hdr"><h3>
+            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            115年7月行事曆
+          </h3></div>
+          <div class="card-body">
+            <div style="overflow-x:auto">
+              <table style="width:100%;border-collapse:collapse;font-size:13px">
+                <thead>
+                  <tr style="background:#eef8f2">
+                    <th style="padding:8px 14px;text-align:left;border:1px solid #d4e8dc;width:120px;color:#145228">日期</th>
+                    <th style="padding:8px 14px;text-align:left;border:1px solid #d4e8dc;color:#145228">事項</th>
+                    <th style="padding:8px 14px;text-align:left;border:1px solid #d4e8dc;color:#145228">時間／地點</th>
+                    <th style="padding:8px 14px;text-align:left;border:1px solid #d4e8dc;color:#145228">備註</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="background:#fff8f8">
+                    <td style="padding:9px 14px;border:1px solid #e8f0eb;font-weight:700;color:#c0392b">7月31日（五）⭐⭐</td>
+                    <td style="padding:9px 14px;border:1px solid #e8f0eb"><strong>理事長選舉暨職務交接</strong>（返校日）</td>
+                    <td style="padding:9px 14px;border:1px solid #e8f0eb">08:00–08:20<br>第一會議室</td>
+                    <td style="padding:9px 14px;border:1px solid #e8f0eb;color:#c0392b"><strong>全體會員必須出席</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <div class="card-hdr"><h3>
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            6/26 大會議程
+          </h3></div>
+          <div class="card-body">
+            <div style="font-size:13px;color:#444;line-height:1.9">
+              <div style="display:flex;gap:10px;padding:6px 0;border-bottom:1px solid #f0f2f5"><span style="color:#1a5c35;font-weight:700;min-width:28px">一</span><span>主席致詞暨開場宣讀</span></div>
+              <div style="display:flex;gap:10px;padding:6px 0;border-bottom:1px solid #f0f2f5"><span style="color:#1a5c35;font-weight:700;min-width:28px">二</span><span>正式通過組織章程</span></div>
+              <div style="display:flex;gap:10px;padding:6px 0;border-bottom:1px solid #f0f2f5"><span style="color:#1a5c35;font-weight:700;min-width:28px">三</span><span>正式通過理監事選舉實施章程</span></div>
+              <div style="display:flex;gap:10px;padding:6px 0;border-bottom:1px solid #f0f2f5"><span style="color:#1a5c35;font-weight:700;min-width:28px">四</span><span>宣讀選舉說明</span></div>
+              <div style="display:flex;gap:10px;padding:6px 0;border-bottom:1px solid #f0f2f5"><span style="color:#1a5c35;font-weight:700;min-width:28px">五</span><span>確認各群組候選人名單</span></div>
+              <div style="display:flex;gap:10px;padding:6px 0;border-bottom:1px solid #f0f2f5"><span style="color:#1a5c35;font-weight:700;min-width:28px">六</span><span>分群組辦理理事投票（共9名）</span></div>
+              <div style="display:flex;gap:10px;padding:6px 0;border-bottom:1px solid #f0f2f5"><span style="color:#1a5c35;font-weight:700;min-width:28px">七</span><span>全體辦理監事投票（共3名）</span></div>
+              <div style="display:flex;gap:10px;padding:6px 0;border-bottom:1px solid #f0f2f5"><span style="color:#1a5c35;font-weight:700;min-width:28px">八</span><span>開票唱票（公開當場開票）</span></div>
+              <div style="display:flex;gap:10px;padding:6px 0"><span style="color:#1a5c35;font-weight:700;min-width:28px">九</span><span>公告理監事當選名單、散會</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-hdr"><h3>
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            7/31 大會議程
+          </h3></div>
+          <div class="card-body">
+            <div style="font-size:13px;color:#444;line-height:1.9">
+              <div style="display:flex;gap:10px;padding:6px 0;border-bottom:1px solid #f0f2f5"><span style="color:#1a5c35;font-weight:700;min-width:28px">一</span><span>主席致詞</span></div>
+              <div style="display:flex;gap:10px;padding:6px 0;border-bottom:1px solid #f0f2f5"><span style="color:#1a5c35;font-weight:700;min-width:28px">二</span><span>確認出席會員人數</span></div>
+              <div style="display:flex;gap:10px;padding:6px 0;border-bottom:1px solid #f0f2f5"><span style="color:#1a5c35;font-weight:700;min-width:28px">三</span><span>宣讀理事長選舉說明</span></div>
+              <div style="display:flex;gap:10px;padding:6px 0;border-bottom:1px solid #f0f2f5"><span style="color:#1a5c35;font-weight:700;min-width:28px">四</span><span>全體會員投票選舉理事長</span></div>
+              <div style="display:flex;gap:10px;padding:6px 0;border-bottom:1px solid #f0f2f5"><span style="color:#1a5c35;font-weight:700;min-width:28px">五</span><span>開票唱票</span></div>
+              <div style="display:flex;gap:10px;padding:6px 0;border-bottom:1px solid #f0f2f5"><span style="color:#1a5c35;font-weight:700;min-width:28px">六</span><span>公告新任理事長</span></div>
+              <div style="display:flex;gap:10px;padding:6px 0"><span style="color:#1a5c35;font-weight:700;min-width:28px">七</span><span>辦理職務交接、散會</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ PAGE: MEMBERS ══ -->
+<div id="page-members" class="page">
+  <div class="page-heading">
+    <div class="page-heading-inner">
+      <h2>會員名冊</h2>
+      <p>115年6月12日 ｜ 全體會員共 43 人</p>
+    </div>
+  </div>
+  <div class="page-wrap">
+    <div class="search-bar">
+      <input type="text" id="memberSearch" placeholder="搜尋姓名..." oninput="filterMembers()" />
+      <button onclick="filterMembers()">搜尋</button>
+    </div>
+    <div class="tabs">
+      <button class="tab active" onclick="switchTab(this,'m-all')">全部（43）</button>
+      <button class="tab" onclick="switchTab(this,'m-teacher')">教師（32）</button>
+      <button class="tab" onclick="switchTab(this,'m-admin')">行政（10）</button>
+      <button class="tab" onclick="switchTab(this,'m-principal')">校長（1）</button>
+    </div>
+
+    <div id="m-all" class="tab-pane active">
+      <div class="member-grid" id="memberGrid">
+        <!-- Teachers -->
+        <div class="member-card" data-role="teacher" data-name="張麥寧"><div class="avatar av-green">張</div><div><div class="member-name">張麥寧</div><div class="member-role">女</div><span class="member-badge badge-teacher">教師</span></div></div>
+        <div class="member-card" data-role="teacher" data-name="林詠珊"><div class="avatar av-rose">林</div><div><div class="member-name">林詠珊</div><div class="member-role">女</div><span class="member-badge badge-teacher">教師</span></div></div>
+        <div class="member-card" data-role="teacher" data-name="賴惠鈴"><div class="avatar av-blue">賴</div><div><div class="member-name">賴惠鈴</div><div class="member-role">女</div><span class="member-badge badge-teacher">教師</span></div></div>
+        <div class="member-card" data-role="teacher" data-name="劉麗蓉"><div class="avatar av-amber">劉</div><div><div class="member-name">劉麗蓉</div><div class="member-role">女</div><span class="member-badge badge-teacher">教師</span></div></div>
+        <div class="member-card" data-role="teacher" data-name="陳穗秋"><div class="avatar av-coral">陳</div><div><div class="member-name">陳穗秋</div><div class="member-role">女</div><span class="member-badge badge-teacher">教師</span></div></div>
+        <div class="member-card" data-role="teacher" data-name="陳姿良"><div class="avatar av-purple">陳</div><div><div class="member-name">陳姿良</div><div class="member-role">女</div><span class="member-badge badge-teacher">教師</span></div></div>
+        <div class="member-card" data-role="teacher" data-name="蕭惠民"><div class="avatar av-green">蕭</div><div><div class="member-name">蕭惠民</div><div class="member-role">女</div><span class="member-badge badge-teacher">教師</span></div></div>
+        <div class="member-card" data-role="teacher" data-name="張雲卿"><div class="avatar av-blue">張</div><div><div class="member-name">張雲卿</div><div class="member-role">女</div><span class="member-badge badge-teacher">教師</span></div></div>
+        <div class="member-card" data-role="teacher" data-name="楊雅婷"><div class="avatar av-rose">楊</div><div><div class="member-name">楊雅婷</div><div class="member-role">女</div><span class="member-badge badge-teacher">教師</span></div></div>
+        <div class="member-card" data-role="teacher" data-name="楊閔如"><div class="avatar av-amber">楊</div><div><div class="member-name">楊閔如</div><div class="member-role">女</div><span class="member-badge badge-teacher">教師</span></div></div>
+        <div class="member-card" data-role="teacher" data-name="林麗娟"><div class="avatar av-coral">林</div><div><div class="member-name">林麗娟</div><div class="member-role">女</div><span class="member-badge badge-teacher">教師</span></div></div>
+        <div class="member-card" data-role="teacher" data-name="張瓊分"><div class="avatar av-purple">張</div><div><div class="member-name">張瓊分</div><div class="member-role">女</div><span class="member-badge badge-teacher">教師</span></div></div>
+        <div class="member-card" data-role="teacher" data-name="潘毓琪"><div class="avatar av-green">潘</div><div><div class="member-name">潘毓琪</div><div class="member-role">女</div><span class="member-badge badge-teacher">教師</span></div></div>
+        <div class="member-card" data-role="teacher" data-name="陳青美"><div class="avatar av-blue">陳</div><div><div class="member-name">陳青美</div><div class="member-role">女</div><span class="member-badge badge-teacher">教師</span></div></div>
+        <div class="member-card" data-role="teacher" data-name="黃國濠"><div class="avatar av-amber">黃</div><div><div class="member-name">黃國濠</div><div class="member-role">男</div><span class="member-badge badge-teacher">教師</span></div></div>
+        <div class="member-card" data-role="teacher" data-name="梁易琪"><div class="avatar av-rose">梁</div><div><div class="member-name">梁易琪</div><div class="member-role">女</div><span class="member-badge badge-teacher">教師</span></div></div>
+        <div class="member-card" data-role="teacher" data-name="黃意文"><div class="avatar av-coral">黃</div><div><div class="member-name">黃意文</div><div class="member-role">女</div><span class="member-badge badge-teacher">教師</span></div></div>
+        <div class="member-card" data-role="teacher" data-name="許秋燕"><div class="avatar av-green" style="border:2px solid #1a5c35">許</div><div><div class="member-name">許秋燕</div><div class="member-role">女</div><span class="member-badge badge-chief">理事長</span></div></div>
+        <div class="member-card" data-role="teacher" data-name="王嘉慧"><div class="avatar av-blue">王</div><div><div class="member-name">王嘉慧</div><div class="member-role">女</div><span class="member-badge badge-teacher">教師</span></div></div>
+        <div class="member-card" data-role="teacher" data-name="鄭暐群"><div class="avatar av-amber">鄭</div><div><div class="member-name">鄭暐群</div><div class="member-role">男</div><span class="member-badge badge-teacher">教師</span></div></div>
+        <div class="member-card" data-role="teacher" data-name="劉永立"><div class="avatar av-purple">劉</div><div><div class="member-name">劉永立</div><div class="member-role">男</div><span class="member-badge badge-teacher">教師</span></div></div>
+        <div class="member-card" data-role="teacher" data-name="張雍光"><div class="avatar av-coral">張</div><div><div class="member-name">張雍光</div><div class="member-role">男</div><span class="member-badge badge-teacher">教師</span></div></div>
+        <div class="member-card" data-role="teacher" data-name="蘇育萱"><div class="avatar av-rose">蘇</div><div><div class="member-name">蘇育萱</div><div class="member-role">女</div><span class="member-badge badge-teacher">教師</span></div></div>
+        <div class="member-card" data-role="teacher" data-name="吳麗卿"><div class="avatar av-green">吳</div><div><div class="member-name">吳麗卿</div><div class="member-role">女</div><span class="member-badge badge-teacher">教師</span></div></div>
+        <div class="member-card" data-role="teacher" data-name="陳秋妤"><div class="avatar av-blue">陳</div><div><div class="member-name">陳秋妤</div><div class="member-role">女</div><span class="member-badge badge-teacher">教師</span></div></div>
+        <div class="member-card" data-role="teacher" data-name="葉千芸"><div class="avatar av-amber">葉</div><div><div class="member-name">葉千芸</div><div class="member-role">女</div><span class="member-badge badge-teacher">教師</span></div></div>
+        <div class="member-card" data-role="teacher" data-name="康華珍"><div class="avatar av-purple">康</div><div><div class="member-name">康華珍</div><div class="member-role">女</div><span class="member-badge badge-teacher">教師</span></div></div>
+        <div class="member-card" data-role="teacher" data-name="陳威龍"><div class="avatar av-coral">陳</div><div><div class="member-name">陳威龍</div><div class="member-role">男</div><span class="member-badge badge-teacher">教師</span></div></div>
+        <div class="member-card" data-role="teacher" data-name="黃子聰"><div class="avatar av-green">黃</div><div><div class="member-name">黃子聰</div><div class="member-role">男</div><span class="member-badge badge-teacher">教師</span></div></div>
+        <div class="member-card" data-role="teacher" data-name="陳小玲"><div class="avatar av-rose">陳</div><div><div class="member-name">陳小玲</div><div class="member-role">女</div><span class="member-badge badge-teacher">教師</span></div></div>
+        <div class="member-card" data-role="teacher" data-name="周玉琳"><div class="avatar av-blue">周</div><div><div class="member-name">周玉琳</div><div class="member-role">女</div><span class="member-badge badge-teacher">教師</span></div></div>
+        <div class="member-card" data-role="teacher" data-name="楊珮琪"><div class="avatar av-amber">楊</div><div><div class="member-name">楊珮琪</div><div class="member-role">女</div><span class="member-badge badge-teacher">教師</span></div></div>
+        <!-- Principal -->
+        <div class="member-card" data-role="principal" data-name="曾俊堯"><div class="avatar av-amber" style="border:2px solid #856404">曾</div><div><div class="member-name">曾俊堯</div><div class="member-role">男</div><span class="member-badge badge-principal">校長</span></div></div>
+        <!-- Admin -->
+        <div class="member-card" data-role="admin" data-name="黃齡嫻"><div class="avatar av-blue">黃</div><div><div class="member-name">黃齡嫻</div><div class="member-role">女</div><span class="member-badge badge-director">主任</span></div></div>
+        <div class="member-card" data-role="admin" data-name="吳春燕"><div class="avatar av-green">吳</div><div><div class="member-name">吳春燕</div><div class="member-role">女</div><span class="member-badge badge-chief">組長</span></div></div>
+        <div class="member-card" data-role="admin" data-name="吳俊霆"><div class="avatar av-coral">吳</div><div><div class="member-name">吳俊霆</div><div class="member-role">男</div><span class="member-badge badge-director">主任</span></div></div>
+        <div class="member-card" data-role="admin" data-name="許銘堯"><div class="avatar av-purple">許</div><div><div class="member-name">許銘堯</div><div class="member-role">女</div><span class="member-badge badge-director">主任</span></div></div>
+        <div class="member-card" data-role="admin" data-name="謝國明"><div class="avatar av-amber">謝</div><div><div class="member-name">謝國明</div><div class="member-role">男</div><span class="member-badge badge-director">主任</span></div></div>
+        <div class="member-card" data-role="admin" data-name="黃英梅"><div class="avatar av-rose">黃</div><div><div class="member-name">黃英梅</div><div class="member-role">女</div><span class="member-badge badge-chief">組長</span></div></div>
+        <div class="member-card" data-role="admin" data-name="陳月華"><div class="avatar av-blue">陳</div><div><div class="member-name">陳月華</div><div class="member-role">女</div><span class="member-badge badge-chief">組長</span></div></div>
+        <div class="member-card" data-role="admin" data-name="張啟瑞"><div class="avatar av-green">張</div><div><div class="member-name">張啟瑞</div><div class="member-role">男</div><span class="member-badge badge-chief">組長</span></div></div>
+        <div class="member-card" data-role="admin" data-name="陳雅閔"><div class="avatar av-coral">陳</div><div><div class="member-name">陳雅閔</div><div class="member-role">女</div><span class="member-badge badge-chief">組長</span></div></div>
+      </div>
+    </div>
+    <div id="m-teacher" class="tab-pane">
+      <div class="member-grid">
+        <div class="member-card"><div class="avatar av-green" style="border:2px solid #1a5c35">許</div><div><div class="member-name">許秋燕（理事長）</div><span class="member-badge badge-chief">教師</span></div></div>
+        <!-- (Same 32 teachers — omitted for brevity, filtered by JS in full version) -->
+      </div>
+      <p style="font-size:13px;color:#888;margin-top:12px">請使用「全部」分頁或搜尋功能查閱完整名單。</p>
+    </div>
+    <div id="m-admin" class="tab-pane">
+      <div class="member-grid">
+        <div class="member-card"><div class="avatar av-blue">黃</div><div><div class="member-name">黃齡嫻</div><span class="member-badge badge-director">主任</span></div></div>
+        <div class="member-card"><div class="avatar av-coral">吳</div><div><div class="member-name">吳俊霆</div><span class="member-badge badge-director">主任</span></div></div>
+        <div class="member-card"><div class="avatar av-purple">許</div><div><div class="member-name">許銘堯</div><span class="member-badge badge-director">主任</span></div></div>
+        <div class="member-card"><div class="avatar av-amber">謝</div><div><div class="member-name">謝國明</div><span class="member-badge badge-director">主任</span></div></div>
+        <div class="member-card"><div class="avatar av-green">吳</div><div><div class="member-name">吳春燕</div><span class="member-badge badge-chief">組長</span></div></div>
+        <div class="member-card"><div class="avatar av-rose">黃</div><div><div class="member-name">黃英梅</div><span class="member-badge badge-chief">組長</span></div></div>
+        <div class="member-card"><div class="avatar av-blue">陳</div><div><div class="member-name">陳月華</div><span class="member-badge badge-chief">組長</span></div></div>
+        <div class="member-card"><div class="avatar av-green">張</div><div><div class="member-name">張啟瑞</div><span class="member-badge badge-chief">組長</span></div></div>
+        <div class="member-card"><div class="avatar av-coral">陳</div><div><div class="member-name">陳雅閔</div><span class="member-badge badge-chief">組長</span></div></div>
+      </div>
+    </div>
+    <div id="m-principal" class="tab-pane">
+      <div class="member-grid">
+        <div class="member-card"><div class="avatar av-amber" style="border:2px solid #856404">曾</div><div><div class="member-name">曾俊堯</div><div class="member-role">男</div><span class="member-badge badge-principal">校長</span></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ PAGE: CHARTER ══ -->
+<div id="page-charter" class="page">
+  <div class="page-heading">
+    <div class="page-heading-inner">
+      <h2>組織章程</h2>
+      <p>中華民國115年6月26日通過施行</p>
+    </div>
+  </div>
+  <div class="page-wrap">
+    <div class="tabs">
+      <button class="tab active" onclick="switchTab(this,'ch-org')">組織章程</button>
+      <button class="tab" onclick="switchTab(this,'ch-election')">選舉實施章程</button>
+    </div>
+    <div id="ch-org" class="tab-pane active">
+      <div class="charter-wrap">
+        <h2>彰化縣彰化市民生國民小學教師會組織章程</h2>
+        <p class="subtitle">中華民國115年6月26日會員大會通過施行</p>
+
+        <div class="charter-chapter">第一章 總則</div>
+        <div class="charter-article"><div class="art-title">第一條【名稱】</div><div class="art-body">本會定名為「彰化縣彰化市民生國民小學教師會」（以下簡稱本會）。</div></div>
+        <div class="charter-article"><div class="art-title">第二條【性質與依據】</div><div class="art-body">本會為依教師法及人民團體法規定組成之職業團體，以保障教師專業自主，促進教育發展，維護教師權益為宗旨。</div></div>
+        <div class="charter-article"><div class="art-title">第三條【會址】</div><div class="art-body">本會會址設於彰化縣彰化市民生國民小學校內，必要時得經理事會決議遷移之。</div></div>
+        <div class="charter-article"><div class="art-title">第四條【任務】</div><div class="art-body">本會辦理下列任務：<ol><li>研究並改進教育方法，提升教學品質。</li><li>維護會員之專業尊嚴與合法權益。</li><li>協助辦理教師進修及專業發展活動。</li><li>反映會員意見，與學校行政進行溝通協調。</li><li>辦理會員福利及聯誼活動。</li><li>其他依法令或章程規定應辦理之事項。</li></ol></div></div>
+
+        <div class="charter-chapter">第二章 會員</div>
+        <div class="charter-article"><div class="art-title">第五條【會員資格】</div><div class="art-body">凡服務於彰化縣彰化市民生國民小學，依法取得教師資格之現職教師（含學年級任教師、科任教師及兼任行政職務之教師），均得申請加入本會為會員。本會採自願入會制，入會自申請經理事會核准後生效。</div></div>
+        <div class="charter-article"><div class="art-title">第六條【入會程序】</div><div class="art-body">申請入會者，應填具入會申請書，向本會提出申請。</div></div>
+        <div class="charter-article"><div class="art-title">第七條【會費】</div><div class="art-body">本會目前不收取會費。如日後有財務需求，得由理事會提案，經會員大會出席會員過半數同意後，訂定會費標準並公告之。</div></div>
+        <div class="charter-article"><div class="art-title">第八條【會員權利】</div><div class="art-body"><ol><li>出席會員大會並享有表決權、選舉權、被選舉權及罷免權。</li><li>享受本會一切活動及福利。</li><li>對本會業務提出建議及批評。</li><li>請求本會協助處理與教師職務相關之事宜。</li></ol></div></div>
+        <div class="charter-article"><div class="art-title">第九條【會員義務】</div><div class="art-body"><ol><li>遵守本會章程及會員大會決議。</li><li>配合本會活動及業務推行。</li><li>如訂有會費，依規定繳納。</li></ol></div></div>
+
+        <div class="charter-chapter">第三章 組織</div>
+        <div class="charter-article"><div class="art-title">第十二條【組織架構】</div><div class="art-body">本會設下列組織：<ol><li>會員大會。</li><li>理事會（含理事長）。</li><li>監事會。</li></ol></div></div>
+        <div class="charter-article"><div class="art-title">第十三條【理事會組成】</div><div class="art-body">本會設理事九名，組成理事會，理事任期兩年，連選得連任。理事依各群組代表結構選出：一至六年級各學年各一名（共六名）、科任群組一名、行政群組兩名。</div></div>
+        <div class="charter-article"><div class="art-title">第十四條【理事長】</div><div class="art-body">本會設理事長一名，由全體會員就當選理事中，以無記名單記投票方式選出，任期兩年，連選得連任一次。</div></div>
+        <div class="charter-article"><div class="art-title">第十五條【監事會組成】</div><div class="art-body">本會設監事三名，組成監事會，由全體會員選出，任期兩年，連選得連任。監事會互推一名常務監事，主持監事會會議。</div></div>
+
+        <div class="charter-chapter">第五章 財務</div>
+        <div class="charter-article"><div class="art-title">第二十七條【財務文書人員設置】</div><div class="art-body">本會設財務文書一人，負責財務收支記帳、憑證整理、印信圖記管理及一般會務文件整理等事務。擔任財務文書者，不得同時擔任本會理事或監事。</div></div>
+        <div class="charter-article"><div class="art-title">第二十八條【會計年度】</div><div class="art-body">本會會計年度與學年度一致，自每年八月一日起至次年七月三十一日止。</div></div>
+
+        <div class="charter-chapter">第八章 附則</div>
+        <div class="charter-article"><div class="art-title">第三十七條【歷史資料之補正】</div><div class="art-body">本會如因歷年章程、成立資料、理監事名冊或會議紀錄散佚，得由會員大會確認現有會員名冊，並通過本章程作為本會組織運作之依據。</div></div>
+        <div class="charter-article"><div class="art-title">第四十條【施行】</div><div class="art-body">本章程經會員大會通過後施行，修訂時亦同。</div></div>
+
+        <div style="text-align:right;margin-top:28px;font-size:13px;color:#888;border-top:1px solid #e8f0eb;padding-top:14px">
+          彰化縣彰化市民生國民小學教師會<br>
+          中華民國 115 年 6 月 26 日通過
+        </div>
+      </div>
+    </div>
+
+    <div id="ch-election" class="tab-pane">
+      <div class="charter-wrap">
+        <h2>理監事選舉實施章程</h2>
+        <p class="subtitle">中華民國115年6月26日會員大會通過施行</p>
+
+        <div class="charter-chapter">第一章 總則</div>
+        <div class="charter-article"><div class="art-title">第一條【依據】</div><div class="art-body">本章程依彰化縣彰化市民生國民小學教師會組織章程相關規定訂定之。</div></div>
+        <div class="charter-article"><div class="art-title">第三條【選舉週期】</div><div class="art-body">本會每二年辦理改選；必要時，得依章程辦理補選或改選。</div></div>
+
+        <div class="charter-chapter">第二章 選舉職位、名額與代表結構</div>
+        <div class="charter-article"><div class="art-title">第五條【選舉職位】</div><div class="art-body"><ol><li>理事：九（9）名。</li><li>監事：三（3）名。</li><li>理事長：一（1）名，由全體會員從當選理事中投票選出。</li></ol></div></div>
+        <div class="charter-article"><div class="art-title">第六條【理事代表結構】</div><div class="art-body">理事九名依各群組分配：<ol><li>學年代表：一至六年級各學年各選出一名，共六名。</li><li>科任代表：科任教師群組選出一名。</li><li>行政代表：行政人員選出兩名（連記投票制）。</li></ol></div></div>
+        <div class="charter-article"><div class="art-title">第八條【任期】</div><div class="art-body">理事、監事任期均為兩年，連選得連任。理事長任期為兩年，連選得連任一次。</div></div>
+
+        <div class="charter-chapter">第五章 投票</div>
+        <div class="charter-article"><div class="art-title">第十三條【理事選舉方式】</div><div class="art-body">一至六年級及科任群組採單記投票制；行政群組採連記投票制（每人圈選兩名）。</div></div>
+        <div class="charter-article"><div class="art-title">第十四條【監事選舉方式】</div><div class="art-body">監事三名，由全體會員採無記名連記投票制，每位選舉人圈選三名候選人。圈選人數超過或少於三名者，視為廢票。</div></div>
+        <div class="charter-article"><div class="art-title">第十五條【投票資格與程序】</div><div class="art-body">選舉人應親自出席投票，不得委託他人代投。</div></div>
+
+        <div class="charter-chapter">第七章 理事長選舉</div>
+        <div class="charter-article"><div class="art-title">第二十一條【理事長選舉程序】</div><div class="art-body">理事長選舉應有全體會員過半數出席。選舉採無記名單記投票，從當選理事中圈選，得票最多者當選。得票相同時，以抽籤決定之。</div></div>
+
+        <div style="text-align:right;margin-top:28px;font-size:13px;color:#888;border-top:1px solid #e8f0eb;padding-top:14px">
+          彰化縣彰化市民生國民小學教師會<br>
+          中華民國 115 年 6 月 26 日通過
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ PAGE: DOWNLOADS ══ -->
+<div id="page-downloads" class="page">
+  <div class="page-heading">
+    <div class="page-heading-inner">
+      <h2>檔案下載</h2>
+      <p>各類表單與文件下載</p>
+    </div>
+  </div>
+  <div class="page-wrap">
+    <div class="card">
+      <div class="card-hdr"><h3>
+        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        章程文件
+      </h3></div>
+      <div class="card-body">
+        <div class="dl-row">
+          <div class="dl-ico ico-pdf">PDF</div>
+          <div class="dl-info">
+            <div class="dname">彰化縣彰化市民生國民小學教師會組織章程</div>
+            <div class="dmeta">PDF ｜ 115年6月26日通過 ｜ 正式版本</div>
+          </div>
+          <button class="dlbtn"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>下載</button>
+        </div>
+        <div class="dl-row">
+          <div class="dl-ico ico-pdf">PDF</div>
+          <div class="dl-info">
+            <div class="dname">理監事選舉實施章程</div>
+            <div class="dmeta">PDF ｜ 115年6月26日通過 ｜ 正式版本</div>
+          </div>
+          <button class="dlbtn"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>下載</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-hdr"><h3>
+        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        會員相關表單
+      </h3></div>
+      <div class="card-body">
+        <div class="dl-row">
+          <div class="dl-ico ico-doc">DOC</div>
+          <div class="dl-info">
+            <div class="dname">教師會入會申請書</div>
+            <div class="dmeta">Word ｜ 填寫後交由理事長許秋燕審核</div>
+          </div>
+          <button class="dlbtn"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>下載</button>
+        </div>
+        <div class="dl-row">
+          <div class="dl-ico ico-doc">DOC</div>
+          <div class="dl-info">
+            <div class="dname">退會申請書</div>
+            <div class="dmeta">Word ｜ 書面申請退會，經理事會核准</div>
+          </div>
+          <button class="dlbtn"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>下載</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-hdr"><h3>
+        <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        會議文件
+      </h3></div>
+      <div class="card-body">
+        <div class="dl-row">
+          <div class="dl-ico ico-pdf">ODT</div>
+          <div class="dl-info">
+            <div class="dname">第10屆第2次會員大會議程記錄（115年6月12日）</div>
+            <div class="dmeta">ODT ｜ 審議通過組織章程及理監事選舉辦法</div>
+          </div>
+          <button class="dlbtn" onclick="alert('請向理事長索取電子檔')"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>下載</button>
+        </div>
+                <div class="dl-row">
+          <div class="dl-ico ico-pdf">PDF</div>
+          <div class="dl-info">
+            <div class="dname">115年6月12日章程審議會開會通知暨議程</div>
+            <div class="dmeta">PDF ｜ 115年6月8日發出</div>
+          </div>
+          <button class="dlbtn"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>下載</button>
+        </div>
+        <div class="dl-row">
+          <div class="dl-ico ico-pdf">PDF</div>
+          <div class="dl-info">
+            <div class="dname">115年6月26日理監事選舉開會通知暨議程</div>
+            <div class="dmeta">PDF ｜ 115年6月8日發出</div>
+          </div>
+          <button class="dlbtn"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>下載</button>
+        </div>
+        <div class="dl-row">
+          <div class="dl-ico ico-pdf">PDF</div>
+          <div class="dl-info">
+            <div class="dname">理事長選舉日期更正通知（115民教字第0002號）</div>
+            <div class="dmeta">PDF ｜ 115年6月11日發出</div>
+          </div>
+          <button class="dlbtn"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>下載</button>
+        </div>
+        <div class="dl-row">
+          <div class="dl-ico ico-pdf">PDF</div>
+          <div class="dl-info">
+            <div class="dname">115年6月12日個人會員名冊</div>
+            <div class="dmeta">PDF ｜ 全體會員共43人</div>
+          </div>
+          <button class="dlbtn"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>下載</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-hdr"><h3>
+        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        彰化縣教師工會表單
+      </h3><a href="https://www.ctu.chc.edu.tw/xoops/modules/tad_uploader/index.php?of_cat_sn=10" target="_blank">前往工會網站 →</a></div>
+      <div class="card-body">
+        <div style="background:#eef8f2;border-radius:8px;padding:12px 16px;margin-bottom:14px;font-size:13px;color:#145228;display:flex;gap:10px;align-items:flex-start">
+          <svg viewBox="0 0 24 24" style="width:18px;height:18px;stroke:#1a5c35;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;margin-top:1px"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <div>以下表單由<strong>彰化縣教師工會</strong>提供，點選「前往下載」將開啟工會官方網站。</div>
+        </div>
+        <div class="dl-row">
+          <div class="dl-ico ico-pdf">CTU</div>
+          <div class="dl-info">
+            <div class="dname">彰化縣教師工會各式表單</div>
+            <div class="dmeta">彰化縣教師工會官方表單下載區</div>
+          </div>
+          <a href="https://www.ctu.chc.edu.tw/xoops/modules/tad_uploader/index.php?of_cat_sn=10" target="_blank" class="dlbtn"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>前往下載</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-inner">
+    <div>© 中華民國115年 彰化縣彰化市民生國民小學教師會 ｜ 理事長：許秋燕 ｜ 500 彰化縣彰化市民生路338號</div>
+    <div style="display:flex;gap:16px">
+      <a href="mailto:helen012066@gmail.com">聯絡我們</a>
+      <a onclick="showPage('charter',document.querySelector('[onclick*=charter]'))">組織章程</a>
+      <a href="https://www.chc.edu.tw" target="_blank">彰化縣教育處</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function showPage(id, btn) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('page-' + id).classList.add('active');
+  if (btn) btn.classList.add('active');
+  window.scrollTo(0,0);
+}
+
+function switchTab(btn, paneId) {
+  const parent = btn.closest('.page') || document.body;
+  parent.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  parent.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById(paneId).classList.add('active');
+}
+
+function filterMembers() {
+  const q = document.getElementById('memberSearch').value.trim().toLowerCase();
+  document.querySelectorAll('#memberGrid .member-card').forEach(card => {
+    const name = card.dataset.name || '';
+    card.style.display = (!q || name.includes(q)) ? '' : 'none';
+  });
+}
+</script>
+</body>
+</html>
